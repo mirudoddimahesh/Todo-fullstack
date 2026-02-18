@@ -1,16 +1,108 @@
-# React + Vite
+ 📁 frontend/ — README.md
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# 🎨 ToDo FullStack — Frontend
 
-Currently, two official plugins are available:
+This is the **client-side** of the ToDo FullStack application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The frontend provides:
+- Task creation UI
+- Task list display
+- Edit & delete functionality
+- API integration with backend
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Axios (for API calls)
+- CSS / Tailwind (if used)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Project Structure
+
+frontend/
+│
+├── public/          # Static files
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── pages/       # Page-level components
+│   ├── App.jsx      # Main app component
+│   ├── main.jsx     # Entry point
+│   └── api.js       # API configuration (if created)
+├── vite.config.js
+└── package.json
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Navigate to frontend folder
+
+```bash
+cd frontend
+2️⃣ Install dependencies
+npm install
+3️⃣ Start development server
+npm run dev
+App runs on:
+
+http://localhost:5173
+🔗 Connecting to Backend
+Make sure backend is running on:
+
+http://localhost:8080
+Example API call:
+
+fetch("http://localhost:8080/api/tasks")
+Or using axios:
+
+axios.get("/api/tasks")
+🧠 How Frontend Works
+React handles UI rendering.
+
+Vite provides fast development build.
+
+User actions trigger API calls.
+
+State updates dynamically display task list.
+
+Data is fetched from backend.
+
+🖥 Features
+Add new tasks
+
+Mark tasks as complete
+
+Delete tasks
+
+Real-time UI updates
+
+Responsive design
+
+🚀 Build for Production
+npm run build
+Output will be inside:
+
+dist/
+You can deploy this to:
+
+Vercel
+
+Netlify
+
+Any static hosting provider
+
+📌 Future Enhancements
+Dark mode
+
+Authentication system
+
+Drag & drop tasks
+
+Pagination
+
+Task categories
